@@ -1,4 +1,4 @@
-'''from pushbullet import Pushbullet
+from pushbullet import Pushbullet
 import requests
 from bs4 import BeautifulSoup
 
@@ -23,8 +23,4 @@ else:
     file.seek(0)
     file.truncate()
     file.write(title)
-file.close()'''
-
-import requests
-URL = "https://w4.onepunch-manga.com/"
-print(requests.get(URL))
+file.close()
