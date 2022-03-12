@@ -16,10 +16,10 @@ def check_for_update():
     soup = BeautifulSoup(r.text, features="html.parser")
     last_episode = soup.find(class_="su-post")
     title = last_episode.a.string
-    if text == title:
-        pb.push_note('Nothing ...', 'No new chapter today')
-    else:
-        pb.push_note('New Chapter!!!', title)
+    if text != title:
+        # pb.push_note('Nothing ...', 'No new chapter today')
+    # else:
+        pb.push_note('New Chapter!!!', title + URL)
         file.seek(0)
         file.truncate()
         file.write(title)
