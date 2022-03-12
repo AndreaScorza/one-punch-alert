@@ -12,6 +12,8 @@ soup = BeautifulSoup(r.text, features="html.parser")
 last_episode = soup.find(class_="su-post")
 title = last_episode.a.string
 
+pb.push_note('dsfwf', 'it is started')
+
 while True:
     time.sleep(900)
     soup = BeautifulSoup(r.text, features="html.parser")
