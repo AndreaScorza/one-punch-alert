@@ -13,7 +13,7 @@ last_episode = soup.find(class_="su-post")
 title = last_episode.a.string
 
 while True:
-    time.sleep(60)
+    time.sleep(30)
     soup = BeautifulSoup(r.text, features="html.parser")
     last_episode = soup.find(class_="su-post")
     new_title = last_episode.a.string
